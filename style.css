@@ -1,0 +1,47 @@
+/* 
+File: style.css
+GUI Assignment:  Creating Your First Web Page
+Student: Katherine Tamayo, UMass Lowell Computer Science, katherine_tamayo@student.uml.edu
+Date: 09/09/2025
+Description: My first web page about crochet. This CSS file style my web page.
+*/
+body {
+  background-color: #ffe6f0;
+  font-family: Arial;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+header h1 {
+  color: #fa6ea5;
+  font-family: "Brush Script MT", cursive;
+  font-size: 50px;
+}
+
+header h2 p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+th {
+  background-color: #fa6ea5;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+  font-family: Arial;
+  border: 1px solid #ddd;
+}
