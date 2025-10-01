@@ -1,0 +1,112 @@
+/* 
+File: pacific.css
+GUI Assignment:  Style a Site with External CSS 
+Student: Katherine Tamayo, UMass Lowell Computer Science, katherine_tamayo@student.uml.edu
+Date: 09/30/2025
+Description: This assignment is to practice using external CSS to style a web page without chaning the HTML file
+*/
+
+header,
+hgroup,
+nav,
+footer,
+figure,
+figcaption,
+aside,
+section,
+article {
+  display: block;
+}
+body {
+  background: #00569f;
+  background-image: url("ptrbackground.jpg");
+  background-repeat: repeat-x;
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+  padding: 0px;
+  margin-left: 200px;
+  margin-right: 20px;
+  vertical-align: top;
+}
+#content li {
+  list-style-image: url("marker.gif");
+}
+
+img {
+  float: left;
+  margin: 10px 25px 10px 10px;
+}
+#wrapper {
+  width: 80%;
+  min-width: 600px;
+  margin: 30px auto; /* center and give top space */
+  /* faux left column: first 160px is light blue, rest is white */
+  background: linear-gradient(to right, #80d5ff 0 160px, #ffffff 160px 100%);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+nav {
+  display: flex;
+  float: left;
+  width: 160px;
+  margin: auto;
+  padding: 10px;
+}
+nav ul {
+  font-size: 1.2em;
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000033;
+  font-weight: bold;
+}
+nav a:hover {
+  color: white;
+}
+.resort {
+  color: #308fbe;
+  font-weight: bold;
+}
+
+header {
+  background-image: url(sunset.jpg);
+  background-size: cover;
+  background-color: #081e34; /* solid fallback so nav blue can't show through */
+  position: relative;
+  z-index: 3; /* keep header above the nav */
+  padding: 6px 20px; /* smaller header height for beginners */
+  box-sizing: border-box;
+  background-position: center;
+}
+
+h1 {
+  margin-bottom: 0;
+  padding: 4px 0; /* reduce title padding */
+  font-size: 1.6em; /* smaller title so header can be shorter */
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #3399cc;
+}
+
+#contact {
+  font-size: 90%;
+}
+dt {
+  color: #000033;
+}
+footer {
+  font-family: Georgia, "Times New Roman", serif;
+  padding: 10px;
+  margin-left: 200px;
+  margin-bottom: 15px;
+  font-size: 80%;
+}
