@@ -1,0 +1,59 @@
+<!--File: index.html
+Author: Katherine Tamayo
+Email: katherine_tamayo@student.uml.edu
+Date Created: October 30, 2025
+Course: COMP 4610 - GUI Programming I
+Assignment: HW3 - Interactive Dynamic Multiplication Table
+Instructor: Professor Wenjin Zhou
+Description: This HTML file sets up the structure for and interactive multiplication table 
+web application. This page includes a form for user input, areas for displaying error messages, 
+displaying the multiplication table, and links to external CSS and JavaScript files for styling and functionality.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Multiplication</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive Multiplication Table</h1>
+      <div class="form-container">
+        <!-- Added novalidate to disable browser validation popups -->
+        <form id="multiplicationForm" novalidate>
+          <!--Input fields for starting column-->
+          <div class="input-group">
+            <label for="startColumn">Starting Column Value:</label>
+            <input type="number" id="startColumn" name="startColumn" />
+          </div>
+          <!--Input fields for ending column-->
+          <div class="input-group">
+            <label for="endColumn">Ending Column Value:</label>
+            <input type="number" id="endColumn" name="endColumn" />
+          </div>
+          <!--Input fields for starting row-->
+          <div class="input-group">
+            <label for="startRow">Starting Row Value:</label>
+            <input type="number" id="startRow" name="startRow" />
+          </div>
+          <!--Input fields for ending row-->
+          <div class="input-group">
+            <label for="endRow">Ending Row Value:</label>
+            <input type="number" id="endRow" name="endRow" />
+          </div>
+          <button type="submit">Generate Table</button>
+        </form>
+        <div id="errorMessages" class="error-container"></div>
+      </div>
+      <div class="table-wrapper">
+        <div id="multiplicationTable"></div>
+      </div>
+    </div>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+/*File: index.html
+Author: Katherine Tamayo
+Email: katherine_tamayo@student.uml.edu
+Date Created: October 30, 2025
+Course: COMP 4610 - GUI Programming I
+Assignment: HW3 - Interactive Dynamic Multiplication Table
+Instructor: Professor Wenjin Zhou
+Description: This CSS file contains styles for the interactive dynamic multiplication table web application.
+*/
+
+   /* General body styles */
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #fcf5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container to center content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Form styles */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+}
+
+/* Input group styles */
+.input-group {
+  margin-bottom: 15px;
+}
+
+/* Label styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input field styles */
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+/* Button styles */
+button {
+  width: 50%;
+  padding: 10px;
+  background-color: #efbfbf;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+button:hover {
+  background-color: #d99b9b;
+}
+
+/* Error message styles */
+.error-container {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #ffe6e6;
+  border: 1px solid #ffcccc;
+  border-radius: 5px;
+  color: #cc0000;
+  display: none;
+}
+
+/* Show error container when there are errors */
+.error-container.show {
+  display: block;
+}
+
+/* Error message text */
+.error-container p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Table wrapper with scrolling */
+.table-wrapper {
+  max-width: 100%;
+  overflow: auto;
+  margin: 20px auto;
+  max-height: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+/* Table cell styles */
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  min-width: 60px;
+}
+
+/* Header cells (first row and first column) */
+table th {
+  background-color: #efbfbf;
+  color: #333;
+  font-weight: bold;
+  position: sticky;
+}
+
+table tr:nth-child(odd) td:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+table tr:nth-child(odd) td:nth-child(even) {
+  background-color: #ffe6e6;
+}
+
+/* Switch pattern for even rows */
+table tr:nth-child(even) td:nth-child(odd) {
+  background-color: #ffe6e6;
+}
+
+table tr:nth-child(even) td:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Hover effect on cells */
+table td:hover {
+  background-color: #ffe6e6;
+  transition: background-color 0.2s;
+}
