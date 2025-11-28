@@ -1,7 +1,7 @@
 /*File: index.html
 Author: Katherine Tamayo
 Email: katherine_tamayo@student.uml.edu
-Date Created: October 30, 2025
+Date Created: November 26, 2025
 Course: COMP 4610 - GUI Programming I
 Assignment: HW3 - Interactive Dynamic Multiplication Table
 Instructor: Professor Wenjin Zhou
@@ -150,3 +150,4 @@ $(document).ready(function () {
     tableContainer.appendChild(table);
   }
 });
+
