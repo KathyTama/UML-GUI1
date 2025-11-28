@@ -1,9 +1,10 @@
 /* File: script.js
 Author: Katherine Tamayo
 Email: katherine_tamayo@student.uml.edu
-Date Created: October 30, 2025
+Date Created: November 26, 2025
 Course: COMP 4610 - GUI Programming I
-Assignment: HW3 - Interactive Dynamic Multiplication Table (Part 2)
+Assignment: HW4 Part 2 - jQuery UI Slider and Tab Widgets
+Instructor: Professor Wenjin Zhou
 Description: This JavaScript file contains the logic for generating an interactive dynamic multiplication table based on user input, including input validation and error handling.
 */
 
@@ -345,3 +346,4 @@ $(document).ready(function () {
     }
   });
 });
+
