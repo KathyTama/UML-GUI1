@@ -1,0 +1,102 @@
+<!-- File: index.html
+Author: Katherine Tamayo
+Email: katherine_tamayo@student.uml.edu
+Date Created: October 30, 2025
+Course: COMP 4610 - GUI Programming I
+Assignment: HW4 Part 2 - jQuery UI Slider and Tab Widgets
+Instructor: Professor Wenjin Zhou
+Description: This HTML file sets up the structure for an interactive multiplication table application using jQuery UI components such as sliders and tabs.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Multiplication - Part 2 (jQuery UI)</title>
+
+    <!-- CSS styles + jQuery UI theme -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Interactive Multiplication Table (Part 2)</h1>
+
+      <!-- Tabs container: first tab is the input tab -->
+      <div id="tabs">
+        <ul id="tabList">
+          <li>
+            <!-- We keep the Input tab first; it must not be deletable -->
+            <a href="#inputTab">Input</a>
+          </li>
+        </ul>
+
+        <!-- Input tab content -->
+        <div id="inputTab" class="input-tab">
+          <div class="form-container">
+            <form id="multiplicationForm" novalidate>
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="startColumn">Starting Column Value:</label>
+                  <input type="number" id="startColumn" name="startColumn" />
+                  <div id="startColumnSlider" class="slider"></div>
+                </div>
+
+                <div class="input-group">
+                  <label for="endColumn">Ending Column Value:</label>
+                  <input type="number" id="endColumn" name="endColumn" />
+                  <div id="endColumnSlider" class="slider"></div>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="startRow">Starting Row Value:</label>
+                  <input type="number" id="startRow" name="startRow" />
+                  <div id="startRowSlider" class="slider"></div>
+                </div>
+
+                <div class="input-group">
+                  <label for="endRow">Ending Row Value:</label>
+                  <input type="number" id="endRow" name="endRow" />
+                  <div id="endRowSlider" class="slider"></div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" id="createTabBtn">
+                  Create Table (New Tab)
+                </button>
+                <button type="button" id="deleteSelected" class="delete-btn">
+                  Delete Selected Tabs
+                </button>
+              </div>
+            </form>
+            <!-- Error messages will be displayed here -->
+            <div id="errorMessages" class="error-container"></div>
+          </div>
+
+          <!-- Live preview area (updates as inputs/sliders change) -->
+          <div class="table-wrapper">
+            <h2>Live Preview</h2>
+            <div id="multiplicationTablePreview"></div>
+          </div>
+        </div>
+        <!-- other generated tabs will be appended here dynamically -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <!-- jQuery Validation Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <!-- application script -->
+    <script src="script.js"></script>
+  </body>
+</html>
