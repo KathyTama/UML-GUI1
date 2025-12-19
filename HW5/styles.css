@@ -1,0 +1,162 @@
+/* File: style.css
+Author: Katherine Tamayo
+Email: katherine_tamayo@student.uml.edu
+Date Created: December 18, 2025
+Course: COMP 4610 - GUI Programming I
+Assignment: HW4 Part 2 - jQuery UI Slider and Tab Widgets
+Instructor: Professor Wenjin Zhou
+Description: This CSS file contains the styling for the Scrabble game interface. 
+It includes styles for the score board, the board, the rack, the tiles, and the controls. 
+The file also includes a background image for the game area and specific styles for different elements to ensure a visually appealing and functional user interface. */
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  user-select: none;
+  background-image: url(backgroundImage.png);
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+/* --- SCORE BOARD --- */
+#score-board {
+  background: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* --- THE BOARD (One Line) --- */
+#board-container {
+  /* 1. Dimensions */
+  width: 800px;
+  height: 65px;
+  margin: 20px auto;
+
+  /* 2. Background */
+  background: url("graphics_data/Scrabble_Board_OneLine.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+
+  /* 3. Grid Layout */
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  column-gap: 0px;
+
+  /* 4. Adjust padding to align slots with board image squares */
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  box-sizing: border-box;
+}
+
+/* Adjustments for board slots */
+.board-slot {
+  height: 65px;
+  /* Remove red border for exact fit */
+  border: none;
+  /* Ensure slots are transparent to show background image */
+  background: transparent;
+  /* Center the tile inside the slot */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- THE RACK --- */
+#rack-container {
+  width: 600px;
+  height: 100px;
+  margin: 40px auto;
+  position: relative;
+  /* Path updated for root directory */
+  background: url("graphics_data/scrabble-tile-holder-406774_640.png") no-repeat
+    bottom center;
+  background-size: contain;
+}
+
+/* Adjustments for rack container */
+#rack {
+  position: absolute;
+  bottom: 15px;
+  left: 80px;
+  width: 440px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- THE TILES --- */
+.tile {
+  width: 45px;
+  height: 45px;
+  margin: 0 2px;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* Ensure image fits perfectly */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+/* --- CONTROLS --- */
+#controls {
+  margin: 30px;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button#restart-btn {
+  background-color: #f44336;
+}
+
+button#restart-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* --- MESSAGE AREA --- */ 
+#message-area {
+  font-weight: bold;
+  height: 20px;
+  margin-top: 10px;
+  /* Default color removed here, handled by classes below */
+}
+
+/* --- MESSAGE CLASSES --- */
+.error-msg {
+  color: red;
+  font-weight: bold;
+}
+
+
+.success-msg {
+  color: green;
+  font-weight: bold;
+}

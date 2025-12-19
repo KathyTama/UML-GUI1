@@ -1,0 +1,67 @@
+<!-- File: index.html
+Author: Katherine Tamayo
+Email: katherine_tamayo@student.uml.edu
+Date Created: December 18, 2025
+Course: COMP 4610 - GUI Programming I
+Assignment: HW 5: One-Line Scrabble Game
+Instructor: Professor Wenjin Zhou
+Description: This HTML file contains the HTML structure for the One-Line Scrabble game, including the necessary links to 
+external CSS and JavaScript files. It also includes the game elements such as the score board, board slots, rack, and control buttons.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>One-Line Scrabble</title>
+
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scrabble.js"></script>
+  </head>
+  <body>
+    <h1>One-Line Scrabble</h1>
+
+    <!-- Score board -->
+    <div id="score-board">Score: <span id="score">0</span></div>
+    <!-- Board slots -->
+    <div id="board-container">
+      <div class="board-slot" data-bonus="none"></div>
+      <div class="board-slot" data-bonus="none"></div>
+      <div class="board-slot" data-bonus="double-word"></div>
+      <div class="board-slot" data-bonus="none"></div>
+      <div class="board-slot" data-bonus="none"></div>
+
+      <div class="board-slot" data-bonus="none"></div>
+
+      <div class="board-slot" data-bonus="double-letter"></div>
+
+      <div class="board-slot" data-bonus="none"></div>
+
+      <div class="board-slot" data-bonus="double-letter"></div>
+
+      <div class="board-slot" data-bonus="none"></div>
+      <div class="board-slot" data-bonus="none"></div>
+      <div class="board-slot" data-bonus="double-letter"></div>
+      <div class="board-slot" data-bonus="double-word"></div>
+      <div class="board-slot" data-bonus="none"></div>
+      <div class="board-slot" data-bonus="none"></div>
+    </div>
+    <!-- Rack -->
+    <div id="rack-container">
+      <div id="rack"></div>
+    </div>
+    <!-- Control buttons -->
+    <div id="controls">
+      <button id="next-word-btn">Play Word</button>
+      <button id="restart-btn">Restart Game</button>
+    </div>
+    <!-- Message area -->
+    <div id="message-area"></div>
+  </body>
+</html>
